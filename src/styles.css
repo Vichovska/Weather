@@ -1,0 +1,84 @@
+h1 {
+  color: #939ea8;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: 50px;
+  padding-top: 10px;
+}
+h2 {
+  color: rgb(1, 1, 46);
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: 32px;
+  padding: 20px;
+}
+h4 {
+  color: rgb(160, 160, 245);
+  font-family: "Lexend", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+h3 {
+  color: rgb(1, 1, 46);
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-weight: 900;
+  font-size: 60px;
+}
+.far {
+  color: rgb(255, 176, 5);
+  display: block;
+  font-size: 100px;
+  text-align: left;
+  padding-left: 350px;
+}
+h5 {
+  color: rgb(160, 160, 245);
+  font-family: "Lexend", sans-serif;
+  text-align: right;
+  font-weight: 500;
+  font-size: 24px;
+  padding-right: 335px;
+}
+h6 {
+  color: rgb(1, 1, 46);
+  font-family: "Lexend", sans-serif;
+  text-align: right;
+  font-weight: 400;
+  font-size: 16px;
+  padding-right: 320px;
+}
+.days {
+  font-family: "Lexend", sans-serif;
+  color: rgb(1, 1, 46);
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+}
+.icons {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
+}
+.temperatures {
+  font-family: "Lexend", sans-serif;
+  color: rgb(160, 160, 245);
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  padding-bottom: 30px;
+}
+.btn {
+  background-color: rgb(160, 160, 245);
+  background-size: 80%;
+  border-color: rgb(160, 160, 245);
+}
+.d-grid {
+  block-size: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
