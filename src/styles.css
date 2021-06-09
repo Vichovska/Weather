@@ -51,6 +51,14 @@ h6 {
   font-size: 16px;
   padding-right: 320px;
 }
+li {
+  color: rgb(1, 1, 46);
+  font-family: "Lexend", sans-serif;
+  text-align: right;
+  font-weight: 400;
+  font-size: 14px;
+  padding-right: 320px;
+}
 .days {
   font-family: "Lexend", sans-serif;
   color: rgb(1, 1, 46);
