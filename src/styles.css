@@ -60,6 +60,9 @@ li {
   padding-right: 320px;
   list-style: none;
 }
+ul {
+  list-style: none;
+}
 .days {
   font-family: "Lexend", sans-serif;
   color: rgb(1, 1, 46);
