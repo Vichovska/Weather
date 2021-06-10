@@ -62,6 +62,7 @@ li {
 }
 ul {
   list-style: none;
+  list-style-position: unset;
 }
 .days {
   font-family: "Lexend", sans-serif;
