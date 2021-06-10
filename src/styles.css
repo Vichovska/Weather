@@ -58,6 +58,7 @@ li {
   font-weight: 400;
   font-size: 14px;
   padding-right: 320px;
+  list-style: none;
 }
 .days {
   font-family: "Lexend", sans-serif;
