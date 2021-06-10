@@ -33,7 +33,7 @@ h3 {
   display: block;
   font-size: 90px;
   text-align: left;
-  padding-left: 250px;
+  padding-left: 200px;
 }
 h5 {
   color: rgb(160, 160, 245);
@@ -49,7 +49,7 @@ h6 {
   text-align: right;
   font-weight: 400;
   font-size: 16px;
-  padding-right: 250px;
+  padding-right: 150px;
   padding-bottom: 30px;
 }
 li {
