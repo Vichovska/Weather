@@ -25,7 +25,7 @@ function showPosition(position) {
 function showWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temp");
-  let weatherDesc = document.querySelector("h4");
+  let weatherDesc = document.querySelector("#description");
   temperatureElement.innerHTML = `${temperature}°C`;
   weatherDesc.innerHTML = response.data.weather[0].description;
 }
@@ -52,7 +52,7 @@ function getPosition(event) {
 let toCurrent = document.querySelector("#currentCity");
 toCurrent.addEventListener("click", getPosition);
 
-
+/////////////////////////////////////////////date
 
 
 let now = new Date();
