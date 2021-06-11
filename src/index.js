@@ -1,13 +1,13 @@
 //////////////////////////////Current Weather & Geolocation
-function currentWeather(response) {
-  console.log();
+function displayTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
-  let location = document.querySelector("h1");
   let currentTemp = document.querySelector("#temp");
-  location.innerHTML = `${response.data.name}`;
+  let city = document.querySelector("h1");
+  let descriptionElement = document.querySelector("#description");
   currentTemp.innerHTML = `${temperature}°C`;
+  city.innerHTML = `${response.data.name}`;
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
-
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -17,7 +17,7 @@ function showPosition(position) {
   let apiKey = "6ba2c825fb47daedbe3a55b4a9cb3ca8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
-  axios.get(apiUrl).then(currentWeather);
+  axios.get(apiUrl).then(displayTemperature);
 
   navigator.geolocation.getCurrentPosition(showPosition);
 }
@@ -53,8 +53,6 @@ let toCurrent = document.querySelector("#currentCity");
 toCurrent.addEventListener("click", getPosition);
 
 /////////////////////////////////////////////date
-
-
 let now = new Date();
 
 let days = [
