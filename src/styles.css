@@ -100,4 +100,8 @@ ul {
 }
 .temp .active {
   color: rgb(1, 1, 46);
+  cursor: default;
+}
+.temp .active:hover {
+  text-decoration: none;
 }
