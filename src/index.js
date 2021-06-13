@@ -25,6 +25,7 @@ function displayTemperature(response) {
   let speedElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#currentTime");
   let iconElement = document.querySelector("#icon");
+  celsiusTemp = response.data.main.temp;
   currentTemp.innerHTML = `${temperature}°C`;
   city.innerHTML = `${response.data.name}`;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -50,12 +51,30 @@ function handleSubmit(event){
 
 function displayFahrenteit(event){
   event.preventDefault();
-  let fahrenheitTemp = (16 * 9) /5 + 32;
   let tempElement = document.querySelector("#temp");
-  tempElement.innerHTML = fahrenheitTemp;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsius * 9) /5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
-  let form = document.querySelector("#form");
-  form.addEventListener("submit", handleSubmit);
 
-  let fahrenheit = document.querySelector("#fahrenheit");
-  fahrenheit.addEventListener("click", displayFahrenteit);
+ function displayCelsius(event){
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  tempElement.innerHTML = Math.round(celsius);
+}
+
+let celsiusTemp = null;
+
+let form = document.querySelector("#form");
+form.addEventListener("submit", handleSubmit);
+
+let fahrenheit = document.querySelector("#fahrenheitLink");
+fahrenheit.addEventListener("click", displayFahrenteit);
+
+let celsius = document.querySelector("#celsiusLink");
+celsius.addEventListener("click", displayCelsius);
+
+search ("Toluca");
