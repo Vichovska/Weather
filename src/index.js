@@ -1,4 +1,3 @@
-//////////////////////////////Current Weather & Geolocation
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -38,7 +37,7 @@ function displayTemperature(response) {
 
 function search(city){
   let apiKey = "6ba2c825fb47daedbe3a55b4a9cb3ca8";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   
   axios.get(apiUrl).then(displayTemperature);
 
@@ -49,6 +48,14 @@ function handleSubmit(event){
   search(cityInputElement.value);
 }
 
-
+function displayFahrenteit(event){
+  event.preventDefault();
+  let fahrenheitTemp = (16 * 9) /5 + 32;
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = fahrenheitTemp;
+}
   let form = document.querySelector("#form");
   form.addEventListener("submit", handleSubmit);
+
+  let fahrenheit = document.querySelector("#fahrenheit");
+  fahrenheit.addEventListener("click", displayFahrenteit);
