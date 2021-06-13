@@ -25,22 +25,22 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-6">
-                <h2>Hello!</h2>
+            <div class="col-7">
+                <h2 id="greeting">Hello!</h2>
             </div>
-            <div class="col-6">
+            <div class="col-5">
                 <h1>Toluca</h1>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-8">
                 <h4 id="description">
                     Mostly Sunny. Don´t forget your SPF!
                 </h4>
             </div>
-            <div class="col-6">
+            <div class="col-4">
                 <h3>
                     <span class="temperature" id="temp">16</span>
                     <span class="degrees">
@@ -58,7 +58,7 @@
             </h6>
         </span>
         <span>
-            <i class="far fa-sun"></i>
+            <i class="far fa-sun" id="icon"></i>
         </span>
     </span>
  
@@ -69,8 +69,8 @@
                 <span id="lowtemp">L: 8°</span>
             </span>
         </li>
-        <li id="rain">
-            Precipitation: 73%
+        <li id="hum">
+            Humidity: 73%
         </li>
         <li id="wind">
             Windspeed: 11km/h
@@ -111,12 +111,18 @@
         <span>
             <span>
                 <form>
-                    <input type="text" id="form" placeholder="Enter your city" autocomplete="off" autofocus="on" />
-                    <input type="submit" value="🔍" class="btn btn-primary" />
+                    <div class="row">
+                        <div class="col-9">    
+                            <input type="text" id="form" placeholder="Enter your city" autocomplete="off" autofocus="on" />
+                            <input type="submit" value="🔍" class="btn btn-primary" />
+                        </div>
                 </form>
             </span>
             <span>
-                <button class="btn btn-primary" type="button" id="currentCity">Current City</button>
+                        <div class="col-3">
+                            <button class="btn btn-primary" type="button" id="currentCity">Current City</button>
+                        </div>
+                    </div>
             </span>
         </span>
     </div>

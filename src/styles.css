@@ -4,6 +4,7 @@ h1 {
   text-align: center;
   font-weight: 500;
   font-size: 50px;
+  text-transform: capitalize;
   padding-top: 10px;
 }
 h2 {
@@ -12,7 +13,7 @@ h2 {
   text-align: center;
   font-weight: 500;
   font-size: 32px;
-  padding: 20px;
+  padding: 10px;
 }
 h4 {
   color: rgb(160, 160, 245);
@@ -26,14 +27,14 @@ h3 {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-weight: 900;
-  font-size: 60px;
+  font-size: 40px;
 }
 .far {
   color: rgb(255, 176, 5);
   display: block;
   font-size: 80px;
   text-align: left;
-  padding-left: 220px;
+  padding-left: 400px;
 }
 h5 {
   color: rgb(160, 160, 245);
@@ -71,13 +72,13 @@ ul {
   color: rgb(1, 1, 46);
   text-align: center;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
 }
 .icons {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 50px;
+  font-size: 30px;
 }
 .temperatures {
   font-family: "Lexend", sans-serif;
