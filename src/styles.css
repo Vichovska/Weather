@@ -17,7 +17,7 @@ h2 {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 24px;
   padding: 10px;
 }
 h4 {
@@ -35,7 +35,7 @@ h3 {
   font-weight: 900;
   font-size: 40px;
 }
-.icon {
+img .icon {
   display: center;
   font-size: 80px;
   width: 50%;
@@ -115,7 +115,7 @@ ul {
   font-size: 10px;
   font-family: "Lexend", sans-serif;
 }
-.coded .attribution {
+h6 .attribution {
   color: rgb(1, 1, 46);
   font-family: "Lexend", sans-serif;
   text-align: right;
