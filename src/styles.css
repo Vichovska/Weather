@@ -26,6 +26,7 @@ h4 {
   text-align: center;
   font-weight: 500;
   font-size: 18px;
+  text-transform: capitalize;
 }
 h3 {
   color: rgb(1, 1, 46);
@@ -84,7 +85,6 @@ ul {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 30px;
 }
 .temperatures {
   font-family: "Lexend", sans-serif;
@@ -110,4 +110,15 @@ ul {
 }
 .temp .active:hover {
   text-decoration: none;
+}
+.celsiuslink {
+  font-size: 10px;
+  font-family: "Lexend", sans-serif;
+}
+.coded .attribution {
+  color: rgb(1, 1, 46);
+  font-family: "Lexend", sans-serif;
+  text-align: right;
+  font-weight: 400;
+  font-size: 10px;
 }
