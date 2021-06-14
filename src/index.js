@@ -11,9 +11,11 @@ function formatDate(timestamp) {
   let days = [
     "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   let day = days[date.getDay()];
-  let months = ["January", "February", "March", "April", "June", "July", "August", "September", "October", "November", "December"];
+  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   let month = months[date.getMonth()];
-  return `${day} ${month}, ${hours}: ${minutes}`;
+  let dates = date.getDate();
+  let year = date.getFullYear();
+  return `${day} ${month} ${dates}, ${year} / ${hours}: ${minutes}`;
 }
 
 function displayTemperature(response) {
@@ -32,7 +34,7 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   speedElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt*1000);
-  iconElement.setAttribute("i", `http://openweathermap.org/img/wn/01d@2x.png`);
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 } 
 
@@ -54,7 +56,7 @@ function displayFahrenteit(event){
   let tempElement = document.querySelector("#temp");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let fahrenheitTemp = (celsius * 9) /5 + 32;
+  let fahrenheitTemp = (celsiusTemp * 9) /5 + 32;
   tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
@@ -63,7 +65,7 @@ function displayFahrenteit(event){
   let tempElement = document.querySelector("#temp");
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  tempElement.innerHTML = Math.round(celsius);
+  tempElement.innerHTML = Math.round(celsiusTemp);
 }
 
 let celsiusTemp = null;

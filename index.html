@@ -18,12 +18,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <script src="src/index.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head>
-
-<body>
-    <div class="container">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="container">
         <div class="row">
             <div class="col-7">
                 <h2 id="greeting">Hello!</h2>
@@ -58,10 +57,11 @@
             </h6>
         </span>
         <span>
-            <i class="far fa-sun" id="icon"></i>
+            <img src="" width="80"
+            alt="clear" class="float-center" id="icon"/>
         </span>
     </span>
- 
+    
     <ul>
         <li>
             <span>
@@ -69,23 +69,39 @@
                 <span id="lowtemp">L: 8°</span>
             </span>
         </li>
-        <li id="hum">
-            Humidity: 73%
+        <li>
+            <span>
+                Humidity:
+            </span>
+            <span id="hum">
+                73 
+            </span>
+            <span>
+                %
+            </span>
         </li>
-        <li id="wind">
-            Windspeed: 11km/h
+        <li>
+            <span>
+                Windspeed:
+            </span>
+            <span id="wind">
+                11
+            </span>
+            <span>
+                km/h
+            </span>
         </li>
     </ul>
-    </br>
-    <div class="container">
-        <div class="row days">
-            <div class="col-2">S</div>
-            <div class="col-2">M</div>
-            <div class="col-2">T</div>
-            <div class="col-2">W</div>
-            <div class="col-2">T</div>
-            <div class="col-2">F</div>
-        </div>
+</br>
+<div class="container">
+    <div class="row days">
+        <div class="col-2">S</div>
+        <div class="col-2">M</div>
+        <div class="col-2">T</div>
+        <div class="col-2">W</div>
+        <div class="col-2">T</div>
+        <div class="col-2">F</div>
+    </div>
     </div>
     <div class="container">
         <div class="row icons">
@@ -116,21 +132,25 @@
                             <input type="text" id="cityInput" placeholder="Enter your city" autocomplete="off" autofocus="on" />
                             <input type="submit" value="🔍" class="btn btn-primary" />
                         </div>
-                </form>
-            </span>
-            <span>
-                        <div class="col-3">
+                    </form>
+                </span>
+                <span>
+                    <div class="col-3">
                             <button class="btn btn-primary" type="button" id="currentCity">Current City</button>
                         </div>
                     </div>
+                </span>
             </span>
-        </span>
-    </div>
+        </div>
     <h6 class="coded">This project was coded by 
         <a href="https://www.linkedin.com/in/victoria-patricia-lopez-vazquez-15559a83/">Victoria Lopez</a>
         using <a href="https://github.com/Vichovska/Weather">GitHub</a>
         and hosted on <a href="https://agitated-haibt-37b136.netlify.app">Netlify</a>
+        <div>Icons made by <a href="" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/"
+                title="Flaticon">www.flaticon.com</a>
+        </div>
     </h6>
+    <script src="src/index.js"></script>
 </body>
 
 </html>
