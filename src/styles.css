@@ -1,3 +1,8 @@
+body {
+  border-color: rgb(160, 160, 245);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
 h1 {
   color: #939ea8;
   font-family: "Montserrat", sans-serif;
@@ -30,10 +35,12 @@ h3 {
   font-size: 40px;
 }
 .icon {
-  display: block;
+  display: center;
   font-size: 80px;
   width: 50%;
   align-items: baseline;
+  align-self: center;
+  margin: 0 auto;
 }
 h5 {
   color: rgb(160, 160, 245);
