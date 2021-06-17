@@ -38,6 +38,35 @@ function formatDate(timestamp) {
   return `${day} ${month} ${dates}, ${year} / ${hours}: ${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML= forecastHTML + `
+  <div class="weather-forecast" id="forecast">
+     <div class="row days">
+       <div class="col-2">${day}</div>
+     <div class="row icons">
+       <div class="col-2">
+        <img src="https://image.flaticon.com/icons/png/512/1779/1779903.png" width="20%" alt="clear"/>
+       </div>
+     </div>
+     <div class="row temperatures">
+       <div class="col-2">
+        <span id="highTemp">22°C </span>
+        <span id="lowTemp">9°C</span>
+       </div>
+     </div>
+    </div>
+  </div>
+    `;
+   )}; 
+   
+   forecastHTML = forecastHTML + `</div>`;
+   forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let currentTemp = document.querySelector("#temp");
@@ -91,6 +120,8 @@ function displayCelsius(event) {
 }
 
 let celsiusTemp = null;
+
+displayForecast();  
 
 let form = document.querySelector("#form");
 form.addEventListener("submit", handleSubmit);
