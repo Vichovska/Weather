@@ -58,7 +58,7 @@ function displayForecast(response) {
       <div class="row days">${formatDay(forecastDay.dt)}
       </div>
       <div class="row icons">
-      <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" width="30" alt="clear"/>
+      <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" width="10" alt="clear"/>
       </div>
       <div class="row temperatures">
        <span>
