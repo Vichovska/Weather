@@ -38,7 +38,7 @@ h3 {
 img .icon {
   display: center;
   font-size: 80px;
-  width: 60%;
+  width: 80%;
   align-items: baseline;
   align-self: center;
   margin: 0 auto;
@@ -112,16 +112,18 @@ ul {
   padding-left: 150px;
   padding-right: 150px;
 }
-.temp .active {
+.temperature .active {
   color: rgb(1, 1, 46);
   cursor: default;
+  text-decoration: none;
 }
-.temp .active:hover {
+.temperature .active:hover {
   text-decoration: none;
 }
 .celsiuslink {
   font-size: 10px;
   font-family: "Lexend", sans-serif;
+  text-decoration: none;
 }
 .coded {
   color: rgb(1, 1, 46);
@@ -133,7 +135,7 @@ ul {
 .container {
   border: 1px solid #dadde1;
   border-radius: 5px;
-  background-image: -moz-radial-gradient();
+  background-color: rgba(241, 222, 253, 0.24);
   margin-top: 20px;
   margin-bottom: 20px;
 }
