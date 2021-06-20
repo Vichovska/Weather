@@ -38,31 +38,38 @@ function formatDate(timestamp) {
   return `${day} ${month} ${dates}, ${year} / ${hours}: ${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp + 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
+
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
-  days.forEach(function (day) {
-    forecastHTML= forecastHTML + `
-  <div class="weather-forecast" id="forecast">
-     <div class="row days">
-       <div class="col-2">${day}</div>
-     <div class="row icons">
-       <div class="col-2">
-        <img src="https://image.flaticon.com/icons/png/512/1779/1779903.png" width="20%" alt="clear"/>
-       </div>
-     </div>
-     <div class="row temperatures">
-       <div class="col-2">
-        <span id="highTemp">22°C </span>
-        <span id="lowTemp">9°C</span>
-       </div>
-     </div>
-    </div>
-  </div>
-    `;
-   }); 
-   
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+
+      forecastHTML= forecastHTML + `
+      <div class="col-2">
+      <div class="row days">${formatDay(forecastDay.dt)}
+      </div>
+      <div class="row icons">
+      <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" width="20%" alt="clear"/>
+      </div>
+      <div class="row temperatures">
+      <span id="highTemp">${Math.round(forecastDay.temp.max)}°C </span>
+      <span id="lowTemp">${Math.round(forecastDay.temp.min)}°C</span>
+      </div>
+      </div>
+      `;
+        }
+  }); 
+    
    forecastHTML = forecastHTML + `</div>`;
    forecastElement.innerHTML = forecastHTML;
 }
@@ -129,8 +136,6 @@ function displayCelsius(event) {
 }
 
 let celsiusTemp = null;
-
-displayForecast();  
 
 let form = document.querySelector("#form");
 form.addEventListener("submit", handleSubmit);
