@@ -17,7 +17,7 @@ h2 {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   padding: 10px;
 }
 h4 {
@@ -25,7 +25,7 @@ h4 {
   font-family: "Lexend", sans-serif;
   text-align: center;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 32px;
   text-transform: capitalize;
 }
 h3 {
@@ -33,12 +33,12 @@ h3 {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-weight: 900;
-  font-size: 40px;
+  font-size: 32px;
 }
 img .icon {
   display: center;
   font-size: 80px;
-  width: 50%;
+  width: 60%;
   align-items: baseline;
   align-self: center;
   margin: 0 auto;
@@ -59,7 +59,6 @@ h6 {
   font-size: 16px;
   padding-bottom: 40px;
   padding-left: 100px;
-  padding-right: 250px;
 }
 li {
   color: rgb(1, 1, 46);
@@ -67,7 +66,7 @@ li {
   text-align: right;
   font-weight: 400;
   font-size: 14px;
-  padding-right: 250px;
+  padding-right: 150px;
   list-style: none;
 }
 ul {
@@ -79,19 +78,19 @@ ul {
   color: rgb(1, 1, 46);
   text-align: center;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
 }
 .icons {
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 .temperatures {
   font-family: "Lexend", sans-serif;
   color: rgb(160, 160, 245);
   text-align: center;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   padding-bottom: 30px;
 }
 .lowTemp {
@@ -124,10 +123,17 @@ ul {
   font-size: 10px;
   font-family: "Lexend", sans-serif;
 }
-h6 .attribution {
+.coded {
   color: rgb(1, 1, 46);
   font-family: "Lexend", sans-serif;
   text-align: right;
   font-weight: 400;
   font-size: 10px;
+}
+.container {
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+  background-image: -moz-radial-gradient();
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

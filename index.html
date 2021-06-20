@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/157ce85c2e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
     </head>
     
     <body>
-        <div class="container">
+     <div class="container">
+      <div class="weather-app">
         <div class="row">
             <div class="col-7">
                 <h2 id="greeting">Hello! Hola! Hej! Hallo! Ciao!</h2>
@@ -31,12 +32,12 @@
                 <h1>Toluca</h1>
             </div>
         </div>
-    </div>
-    <div class="container">
+</div>
+     <div class="container">
         <div class="row">
             <div class="col-8">
                 <h4 id="description">
-                    Mostly Sunny. Don´t forget your SPF!
+                     Mostly Sunny. Don´t forget your SPF!
                 </h4>
             </div>
             <div class="col-4">
@@ -49,16 +50,15 @@
                 </h3>
             </div>
         </div>
-    </div>
+     </div>
     <span>
         <span>
             <h6 class="date"  id="currentTime">
-                Sunday April 25th, 2021
+                 Sunday April 25th, 2021
             </h6>
         </span>
         <span class="d-flex align-items-center">
-            <img src="" width="80"
-            alt="clear" id="icon"/>
+            <img src="" width="80" alt="clear" id="icon"/>
         </span>
     </span> 
     <ul>
@@ -79,47 +79,39 @@
             <span>km/h</span>
         </li>
     </ul>
-</br>
-<div class="weather-forecast" id="forecast">
-    <div class="row days">
-        <div class="col-2">S</div>
-        <div class="row icons">
-            <div class="col-2">
-                <img src="https://image.flaticon.com/icons/png/512/1779/1779903.png" width="20%" alt="clear"/>
-            </div>
+    </br>
+    <div class="weather-forecast" id="forecast">
+        <div class="col-2">
+                <div class="row days">S</div>
+                <div class="row icons">
+                    <img src="https://image.flaticon.com/icons/png/512/1779/1779903.png" width="10%" alt="clear"/>
+                </div>
+                <div class="row temperatures">
+                     <span id="highTemp">22°C </span>
+                     <span id="lowTemp">9°C</span>
+                </div>
         </div>
-        <div class="row temperatures">
-            <div class="col-2">
-                <span id="highTemp">22°C </span>
-                <span id="lowTemp">9°C</span>
-            </div>
-        </div>
-    </div>
     </div>
     <div class="d-grid gap-2">
         <span>
             <span>
                 <form id="form">
-                 <div class="row">
+                    <div class="row">
                         <div class="col-9">    
                             <input type="text" id="cityInput" placeholder="Enter your city" autocomplete="off" autofocus="on" />
                             <input type="submit" value="🔍" class="btn btn-primary" />
                         </div>
+                    </div>
                 </form>
-            </span>
-            <span>
-                  <div class="col-3">
-                        <button class="btn btn-primary" type="button" id="currentCity">Current City</button>
-                  </div>
-                 </div>
             </span>
         </span>
     </div>
     <h6 class="coded">This project was coded by 
         <a href="https://www.linkedin.com/in/victoria-patricia-lopez-vazquez-15559a83/">Victoria Lopez</a>
-        using <a href="https://github.com/Vichovska/Weather">GitHub</a>
-        and hosted on <a href="https://agitated-haibt-37b136.netlify.app">Netlify</a>
+            using <a href="https://github.com/Vichovska/Weather">GitHub</a>
+            and hosted on <a href="https://agitated-haibt-37b136.netlify.app">Netlify</a>
     </h6>
+</div>
     <script src="src/index.js"></script>
 </body>
 </html>
